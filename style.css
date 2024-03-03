@@ -1,0 +1,16 @@
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+
+    width: 1000px;
+    height: 1000px;
+}
+
+.cell {
+    flex:auto;
+}
+
+.cell:hover{
+    background-color: black;
+}
