@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,32 @@
     <title>Etch-A-Sketch</title>
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
+    <div class="btnContainer">
+        <button class="button" id="cellsBtn">Count</button>
+        <button class="button" id="clearBtn">Clear</button>
+        <button class="button" id="colorBtn">Rainbow</button>
+        <button class="button" id="shadedBtn">Shade</button>
+        <input type="color" id="colorPicker" class="color">
+
+    </div>
     <div id=gridContainer class="grid-container">
     </div>
 
 </body>
+<script>
+    let x = 5;
+    const event = new Event('start');
+
+    document.addEventListener('start', () => {
+        alert("Triggered");
+    });
+
+    function g() {
+        document.dispatchEvent(event);
+    }
+</script>
+
 </html>

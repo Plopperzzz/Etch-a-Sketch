@@ -3,14 +3,12 @@
     flex-wrap: wrap;
     border: 1px solid black;
 
-    width: 1000px;
-    height: 1000px;
+    width: 500px;
+    height: 500px;
+    background-color: white;
 }
 
 .cell {
     flex:auto;
-}
-
-.cell:hover{
-    background-color: black;
+    background-color: white;
 }
