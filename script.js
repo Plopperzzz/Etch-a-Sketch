@@ -1,8 +1,9 @@
 let numCells = 10;
 let cellWidth = 1 / numCells;
 let colorState = false;
-let shadeState = false;
+let shadeState = true;
 let colorPicker = document.querySelector('#colorPicker');
+        colorPicker.value = '#f23121';
 let initColor = colorPicker.value;
 let increment = [];
 
@@ -46,6 +47,7 @@ colorBtn.addEventListener('click', () => {
     else {
         colorBtn.style.backgroundColor = 'white';
     }
+    document.querySelector('#shadeBtn').backgroundColor = 'white';
 });
 
 
@@ -55,12 +57,14 @@ shadedBtn.addEventListener('click', () => {
 
     shadeState = !shadeState;
     colorState = false;
+    document.querySelector('#colorBtn').style.backgroundColor = 'white';
 });
 
 // Takes hex value 
 function HexToRGB(rgb) {
     return [parseInt(rgb.slice(1, 3), 16), parseInt(rgb.slice(3, 5), 16), parseInt(rgb.slice(5, 7), 16)];
 }
+
 // takes hex values
 function getIncrement(startColor, endColor, iterations) {
     if(startColor === '#000')
