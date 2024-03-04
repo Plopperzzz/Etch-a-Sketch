@@ -59,7 +59,7 @@ shadedBtn.addEventListener('click', () => {
 
 // Takes hex value 
 function HexToRGB(rgb) {
-    return [parseInt('0x' + rgb.slice(1, 3)), parseInt('0x' + rgb.slice(3, 5)), parseInt('0x' + rgb.slice(5, 7))];
+    return [parseInt(rgb.slice(1, 3), 16), parseInt(rgb.slice(3, 5), 16), parseInt(rgb.slice(5, 7), 16)];
 }
 // takes hex values
 function getIncrement(startColor, endColor, iterations) {
